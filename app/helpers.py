@@ -1,6 +1,5 @@
 import requests
 from lxml import html
-import json
 
 
 def fetch_apartment(url):
@@ -16,7 +15,7 @@ def fetch_apartment(url):
     }
 
 
-def fetch_list(url):
+def fetch_offers(url):
     response = requests.get(url)
     tree = html.fromstring(response.content)
     latest = tree.xpath('//div[@class="result-list-entry__data"]')

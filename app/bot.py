@@ -15,7 +15,8 @@ bot = Bot(token)
 
 
 def start(update, context):
-    update.message.reply_text('Oh, hi there. You will be updated on available apartments every 5 minutes.')
+    update.message.reply_text('Oh, hi there. You will be updated on available apartments every 5 minutes.\n\n'
+                              'https://www.immobilienscout24.de/Suche/S-2/Wohnung-Miete/Baden-Wuerttemberg/Karlsruhe/-/-/25,00-/EURO--800,00')
     logging.info(f'chat id: {update.message.chat_id}, user id: {update.message.from_user.id}')
     with open('app/res/chats.json', 'r') as f:
         content = json.load(f)
