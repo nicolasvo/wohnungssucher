@@ -126,6 +126,4 @@ dmypy.json
 
 .idea/
 
-# Google API credentials
-*.json
 
