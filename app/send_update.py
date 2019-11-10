@@ -15,7 +15,6 @@ with open('app/res/offers.json', 'r') as f:
     existing_offers = json.load(f)
 
 results = fetch_offers(url)
-logging.info('oh, hello there.')
 
 if not set(results['ids']).issubset(set(existing_offers['ids'])):
     logging.info('New offers!')
@@ -41,3 +40,4 @@ if not set(results['ids']).issubset(set(existing_offers['ids'])):
 
     with open('app/res/offers.json', 'w') as f:
         json.dump(existing_offers, f)
+
