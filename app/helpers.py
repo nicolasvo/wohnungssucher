@@ -30,7 +30,7 @@ def fetch_offers(url):
             "id": id,
             "title": apartment.xpath('./a[@class="result-list-entry__brand-title-container"]/h5/text()')[0],
             "url": url_apartment,
-            "address": apartment.xpath('.//button/div/text()')[0],
+            "address": apartment.xpath('.//button/text()')[0],
             "price": price,
             "area": area,
             "rooms": rooms,
